@@ -1,7 +1,7 @@
 # OLAP Web Interface & Data Warehouse Project
 
 > **Lưu ý:** 
-> - Đây là website phục vụ cho bộ môn **INT1422 - Kho dữ liệu & Khai phá dữ liệu**.
+> - Đây là repo phục vụ cho bộ môn **INT1422 - Kho dữ liệu & Khai phá dữ liệu**.
 > - **Giao diện Web (Frontend) hiện tại chỉ được xây dựng ở mức cơ bản (chức năng cốt lõi) nhằm mục đích demo báo cáo và chưa được tối ưu hóa về mặt trải nghiệm người dùng (UX/UI).**
 
 Dự án này là một hệ thống phân tích dữ liệu toàn diện (OLAP) kết hợp Data Warehouse (trên nền tảng Oracle) và một ứng dụng web (React + Node.js/Express) để trực quan hóa dữ liệu.
