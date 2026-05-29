@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Code/server/.env
+Code/client/.env
+Code/client/node_modules/
+Code/server/node_modules/
