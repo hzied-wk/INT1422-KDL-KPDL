@@ -1,0 +1,138 @@
+CÁCH TÍNH ĐIỂM
+
+Có 10 bước trong: trình bày được phần nào thì được điểm phần đấy -> tât nhiên là phải trình bày được đúng theo yêu cầu
+
+Cấu trúc thuyết trình
+
+Trình bày theo 10 bước trong hướng dẫn
+
+-mục lục
+
+-Mục tiẻu phạm vi( bỏ qua)
+
+-Tích hợp thành IDB
+
++Văn phòng đại diện không nối với khách hàng là sai, không nối vòng tròn
+
+-MÔ hình kho dữ liệu
+
++ Ở đây mình trình bày các bảng fact -> sau đó trình bày các bảng dimension tương ứng
+
++Giá đặt vẫn ổn?
+
++Cần trình bày đâu là khóa chính của bảng fact?
+
++ Tất cả cả thành phần không phải độ đo thì là khóa chính, khóa chính là sự kết hợp của cá thành phàn khóa
+
++ Một bảng fact bao gồm cấu thành khóa chính và độ đo
+
++ Mã đơn không bao giờ năm trong bảng fact, do biết mã đơn thì biết khách hàng rồi-> có mã khách hàng rồi thì không cần mã đơn nữa
+
++Bảng fact là cái gồm nhưng thành phần quan trọng để từ đó ra quyết định suy ra nó khong cần chi tiết
+
++Không cho giá đặt vào bảng fact -> nó không mang tính tổng hợp -> không quan tâm
+
++Chiều thời gain không có ngày, do ngày thì chẳng có tính summery, chẳng khác nào OLTP
+
++Bảng tồn kho có chiều thời gian
+
++Càn trình bày số lượng trong kho được mapping như thế nào?
+
+-> Trình bày mã SQL từ IDB sang warehouse
+
+->Không đổ theo từng ngày
+
+->Phải summary
+
+->Dùng các hàm GROUP BY, SUM, MIN,MAX
+
+->KHO PHẢI MANG TÍNH TỔNG HỢP
+
++Các bảng cần ký hiệu khóa chính, hay gạch chân ở dưới
+
+-Phân cấp chiều
+
++Số khối không đủ, số khối phải tương ứng với số chiều, số cấp
+
+-metadata
+
++Có bao nhiều loại metadata
+
++Cần có metadata trên máy, xem ong metadata rồi hãng demo
+
++Cần có một bảng tổng kết metadata rồi lưu metadata trong bảng đó
+
++Cần phải có một bảng dữ liệu về metadata
+
+-Index
+
++Dùng index loại nào? bảng nào dùng index đấy? và lý do dùng INDEX đó
+
++Cần phải có một file Index riêng
+
++Tại sao lại phải tạo file Index?Có mấy file?Tại sao lại tạo mấy file như này?
+
++ Cần trả lời cụ thể , không chung chung? Nói nửa chừng không có ý nghĩa gì?
+
+-> KHông trả lời -> không được điểm
+
+-demo
+
++Các phần được điểm: 3,metadata, index -> demo -> Cần có silde trình bày, không trình bày code nếu không yêu cầu
+
+1,2,4,5,6 -> thiết kết
+
+-Sinh dữ liệu
+
++Sinh dữ liệu như thế nào? Sinh được lượng bao nhiều?
+
+Đối với bảng Dimension (Chiều): Sử dụng SQL thuần túy trên Oracle 19c
+Đối với bảng Fact (Sự kiện): Sử dụng Python với thư viện pandas, numpy, oracledb
+
++Đơn hàng tối thiều 500,000 bảng ghi -> ít quá thì đâu phải warehouse
+
++Sinh thẳng vào bảng fact, không cần sinh IDB
+
+-Sinh khối dữ liệu
+
++Có bao nhiêu khối dữ liệu? 56
+
++Sinh sẵn dữ liệu săn trong khối?
+thực hiện Pre-computation (tính toán sẵn) cho tất cả 45 cubes theo chiến lược:
+
+Pre-compute tại 3 levels cho chiều Thời Gian: NAM → QUY → THÁNG
+Pre-compute tại 2 levels cho chiều Địa lý: BANG → THÀNH PHỐ
+Pre-compute tại 1 level cho chiều Khách Hàng: LOẠI_KH
+
+
++Mỗi khối giống như một bảng dữ liệu. Cần lưu khối đó ở tầng ba. Và có thể lấy dữ liệu trong bảng đó ra
+
++CẦN SHOW ĐƯỢC KHỐI
+
+-drill down, roll up ,...
+
++Cần chỉ rõ hiện tại đang móc vào khối nào, sau đó thực hiện drill down thì móc vào khối nào?
+
++Cần chỉ rõ được như vậy thì mới được demo -> không thì về chỗ
+
++Bấm vào các nút ngày tháng năm thì khác gì query
+
++Phải bấm vào trên biểu đố, ví dụ bấm vào một năm trên biểu đồ thì nó mở ra từng tháng
+
+
+SID_LIST_LISTENER =
+  (SID_LIST =
+    (SID_DESC =
+      (SID_NAME = CLRExtProc)
+      (ORACLE_HOME = C:\app\ADMIN\product\21c\dbhomeXE)
+      (PROGRAM = extproc)
+      (ENVS = "EXTPROC_DLLS=ONLY:C:\app\ADMIN\product\21c\dbhomeXE\bin\oraclr.dll")
+    )
+  )
+
+LISTENER =
+  (DESCRIPTION_LIST =
+    (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))
+      )
+  )

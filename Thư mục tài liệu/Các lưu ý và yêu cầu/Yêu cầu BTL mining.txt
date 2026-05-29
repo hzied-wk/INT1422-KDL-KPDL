@@ -1,0 +1,22 @@
+Bài tập lớn:(đề bài mở)
+
+Lựa chọn một bài toán trong thực tế: ví dụ phần loại các loại khách hàng trong ngân hàng dựa trên hành vi, hiểu bộ dataset
+Bộ dữ liệu phục vụ cho bài tón nào?
+Đưa  bài toán về các dạng bài toán đã học(phải là 1 trong 3 bài đã học ở trên lớp)
+Đưa ra giải pháp giải quyết bài toán
+Bộ dữ liệu cần sạch, nếu chưa sạch cần clean nó(chuẩn hóa, tiền xử lý và loại bỏ các thứ không cần thiết) - không nhât thiét phải dùng tất cả các thuọc tính trong tạp dữ liệu, ví dụ ID - khong có tác dụng gì cho giải quyết bìa toán
+Lựa chọn bộ dữ liệu mình thích truóc, sau đó nghĩ xem có bài toán nào có thể giải quyết trên bộ dữ liêu đó
+Dữ liểu phải đủ lớn - Dữ liệu thật thì mới khai phá được
+Sau khi đã hình thành được bài toán
+Cần có nghiệp vụ về tập dữ liệu đó
+Tiếp theo lựa chọn một phương pháp mining -> ví dụ ASS -> có thể dùng mọt tthuật toán ngoàoi chương trình
+Không cần code, chỉ cần hiều input, tham số, output
+Cần chạy nhiều lần trên bộ dataset( thay đổi lượng và chất của dữ liệu) - số lượng tạp dữ liệu, thêm hoặc bỏ một số thuộc tính
+Cần đánh giá được mô hình xem giải pháp có tốt hay không.
+Sau khi xong giải pháp -> gắn nó vào hệ thống mining
+Phải đưa ra được hệ thống
+Lấy dữ liệu về(hoặc tải lên) ->Huấn luyện mô hình-> cập nhạp mô hình theo tuần suất để hệ thống được học liên tục -> dữ liệu phải lấy về thêm -> Hiện thị kết quả
+Bonus: Hệ thống hỗ trợ khác hàng sử dụng
+Mang sản phảm lên lớp demo
+Cần viết quyền . Bảng phân chia công việc - Và cô có thể hỏi phân công của người khác -> Một người vẫn cần năm toàn bộ hệ thống.
+Mining cần học liên tục để cập nhạp mô hình liên tục
