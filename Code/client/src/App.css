@@ -1,0 +1,123 @@
+.App {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid #0d6efd;
+}
+
+.header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+
+.header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+}
+
+.btn-operation {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-operation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-operation.active {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.data-table {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 600;
+  border: none;
+}
+
+.table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.chart-container {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.operation-badge {
+  display: inline-block;
+  background-color: #0d6efd;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+}
+
+.badge-drill-down {
+  background-color: #0d6efd;
+}
+
+.badge-roll-up {
+  background-color: #6f42c1;
+}
+
+.badge-slice-dice {
+  background-color: #fd7e14;
+}
+
+.badge-pivot {
+  background-color: #198754;
+}
+
