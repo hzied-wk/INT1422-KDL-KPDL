@@ -3,6 +3,9 @@
 
 Thư mục này được sử dụng độc quyền để lưu trữ các phiên bản báo cáo của dự án gửi cho Giảng viên. Nhằm đảm bảo tính thống nhất và chuyên nghiệp khi làm việc nhóm, các thành viên vui lòng tuân thủ các quy tắc dưới đây.
 
+> **Lưu ý:** 
+> Báo cáo chỉ đạt 70%
+
 ## 🗂 Các Loại File Báo Cáo
 
 ### 1. File Word (`.docx`) - Bản Thảo (Draft/Editable)
